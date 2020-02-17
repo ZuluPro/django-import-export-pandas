@@ -1,2 +1,4 @@
 *.sw[pno]
 __pycache__
+import_export_pandas.egg-info/
+.tox/
