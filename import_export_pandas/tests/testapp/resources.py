@@ -7,6 +7,9 @@ class EntryResource(resources.DataframeResource):
     amount_x2 = resources.DataframeField(
         attribute="amount_x2",
     )
+    amount_x3 = resources.DataframeField(
+        attribute="amount_x3",
+    )
     amount_x4 = resources.DataframeField(
         attribute="amount_x2",
     )
@@ -21,6 +24,7 @@ class EntryResource(resources.DataframeResource):
         model = models.Entry
         fields = export_order = (
             'amount_x2',
+            'amount_x3',
             'timestamp',
             'amount',
             'rate',

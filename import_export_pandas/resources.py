@@ -30,6 +30,7 @@ class DataframeResource(resources.ModelResource):
                 queryset = self.get_queryset()
 
             for fieldname, field in self.fields.items():
+                field.attribute = field.attribute or fieldname
                 if '__' in field.attribute and not field.attribute.startswith('__'):
                     # XXX: Pandas does not do multi-depth lookup
                     # So we annotate

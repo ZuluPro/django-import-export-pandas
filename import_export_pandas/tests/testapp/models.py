@@ -15,9 +15,12 @@ class Entry(models.Model):
 
     objects = DataFrameManager()
 
+    def __str__(self):
+        return '#%s' % self.id
+
     @property
     def amount_x2(self):
         return self.amount * 2
 
-    def __str__(self):
-        return '#%s' % self.id
+    def amount_x3(self):
+        return self.amount * 3

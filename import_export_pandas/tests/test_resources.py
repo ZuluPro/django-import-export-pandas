@@ -29,6 +29,10 @@ class DataframeResourceExportTest(TestCase):
         output = self.resource.export(self.qs)
         self.assertTrue(output['amount_x2'].all())
 
+    def test_method(self):
+        output = self.resource.export(self.qs)
+        self.assertTrue(output['amount_x3'].all())
+
     def test_foreign_key_attribute_without_field(self):
         output = self.resource.export(self.qs)
         self.assertTrue(output['instance__id'].all())

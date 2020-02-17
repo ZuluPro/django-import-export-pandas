@@ -8,7 +8,7 @@ def read(filename):
         return fd.read()
 
 setup(
-    name='import_export_pandas',
+    name='django-import-export-pandas',
     version=iep.__version__,
     description=iep.__doc__,
     long_description=read('README.rst'),
