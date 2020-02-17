@@ -16,5 +16,8 @@ class Entry(models.Model):
     objects = DataFrameManager()
 
     @property
-    def amount_x_2(self):
+    def amount_x2(self):
         return self.amount * 2
+
+    def __str__(self):
+        return '#%s' % self.id
